@@ -1,0 +1,17 @@
+a ajouter dans le rapport :
+dans la ârtie 3
+    dans les variable d'etat:
+        total_queue_area = 0.0   # Intégrale de la file totale (pour moyenne temporelle)
+        last_t = 0.0
+    # ── Séries temporelles comme on a fais pour les variable et tt 
+    parle sur  l'echeancier et sur # ── Initialisation de l'échéancier
+    parle aussi sur les metrique # ── Métriques finales
+dans la prtie 5.1
+    ajoute ke temps de simulation 
+    en dit pour quoi on a choisir ses valeur dans la simulation et le temps de simulation  
+    et en explique chaque graphe et tt (pour quoi se stabilise autour de 0.51)(pour quoi le nombre de client se stabilise )(et pour quoi Le taux de perte converge également après la phase transitoire)
+dans la prtie 5.2
+        ajoute a la fin de l'explication pour quoi il se stabilise le debit et pour quoi les collisions limitent le gain 
+dans la prtie 5.3
+    dans la fin de l'explication on ajoute pour quoi il se stabilise et cesse d'augmente et pour l'amilliore il faut fair
+ 
