@@ -13,6 +13,8 @@ L'objectif du projet est d'etudier, par simulation a evenements discrets, le com
 |-- plot_temporal.png             # Evolution temporelle des metriques
 |-- plot_debit_vs_lambda.png      # Debit en fonction de lambda
 |-- plot_debit_vs_N.png           # Debit en fonction du nombre de stations N
+|-- plot_debit_vs_tau.png         # Debit en fonction de tau (backoff)
+|-- plot_debit_et_pertes_vs_K.png # Influence de K sur debit et pertes
 |-- plot_N_optimal.png            # Recherche du N optimal avec IC a 95 %
 |-- mac_live_simulation_fr.py     # Application desktop live avec curseurs
 ```
@@ -77,6 +79,21 @@ Le notebook est organise en plusieurs parties.
    Cette partie etudie l'effet du nombre de stations sur le debit. Le programme lance plusieurs simulations pour differentes valeurs de `N`, puis compare le debit obtenu avec la charge theorique `N * lambda`.
 
    La figure generee est `plot_debit_vs_N.png`.
+
+5.2 **Debit en fonction de `tau`**
+
+   Cette partie etudie l'effet du parametre de backoff `tau` sur le debit (a `N`, `K` et `lambda` fixes).
+   Chaque point correspond a plusieurs simulations independantes, avec un intervalle de confiance a 95 %.
+
+   La figure generee est `plot_debit_vs_tau.png`.
+
+5.3 **Influence de `K` (capacité de file) sur le debit et les pertes**
+
+   Cette section fait varier la taille de file `K` par station et observe :
+   - le debit moyen ;
+   - le taux de pertes (paquets perdus car file pleine).
+
+   La figure generee est `plot_debit_et_pertes_vs_K.png`.
 
 6. **Determination du `N` optimal**
 
