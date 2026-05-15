@@ -14,6 +14,12 @@ L'objectif du projet est d'etudier, par simulation a evenements discrets, le com
 |-- plot_debit_vs_lambda.png      # Debit en fonction de lambda
 |-- plot_debit_vs_N.png           # Debit en fonction du nombre de stations N
 |-- plot_N_optimal.png            # Recherche du N optimal avec IC a 95 %
+|-- mac_live_simulation_fr.py     # Application desktop live avec curseurs
+```
+
+## Apercu visuel du protocole
+
+![Demonstration desktop du protocole MAC](./mac_live_demo.gif)
 
 
 ## Organisation generale de `projet_MAC.ipynb`
@@ -87,11 +93,12 @@ Le notebook est organise en plusieurs parties.
 ### 1. Installer les dependances
 
 Le projet utilise principalement Python, Jupyter, NumPy et Matplotlib.
+Pour l'animation et l'application desktop, installer aussi Pillow et Pygame.
 
 Depuis la racine du projet :
 
 ```bash
-pip install notebook numpy matplotlib
+pip install notebook numpy matplotlib pillow pygame
 ```
 
 Si l'environnement virtuel `.venv` existe deja, il est preferable de l'activer avant d'installer ou d'executer le notebook.
@@ -113,6 +120,14 @@ projet_MAC.ipynb
 Dans Jupyter, executer les cellules dans l'ordre, du haut vers le bas.
 
 Les premieres cellules definissent les fonctions necessaires. Les sections suivantes lancent les experiences et sauvegardent les graphes au format PNG dans le dossier du projet.
+
+### 4. Lancer l'application desktop live
+
+```bash
+python mac_live_simulation_fr.py
+```
+
+Cette fenetre permet de modifier en direct `N`, `K`, `lambda`, `tau` et la vitesse de simulation avec des curseurs.
 
 ## Sorties principales
 
