@@ -1,3 +1,3 @@
 a ajouter dans le rapport :
-dans 3.2 Hypothèses ajoutées dans notre implémentation (met ajour cette section car on a ajoute des nouvel truque dans le code  )
+dans 3.2 Hypothèses ajoutées dans notre implémentation (met ajour cette section car on a ajoute des nouvel truc dans le code  )
 ajoute 6.4 et 6.5 pour Débit d(N,K,λ,τ) en fonction de τ et 5.3 Influence de K (capacité de file) sur le débit et les pertes
