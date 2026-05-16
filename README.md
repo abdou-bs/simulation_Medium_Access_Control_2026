@@ -4,6 +4,16 @@ Ce depot contient une simulation Python du protocole MAC (*Medium Access Control
 
 L'objectif du projet est d'etudier, par simulation a evenements discrets, le comportement d'un canal partage par plusieurs stations : debit, collisions, files d'attente, pertes de paquets et nombre optimal de stations.
 
+## Table des matieres
+
+- [Structure du projet](#structure-du-projet)
+- [Apercu visuel du protocole](#apercu-visuel-du-protocole)
+- [Organisation generale de `projet_MAC.ipynb`](#organisation-generale-de-projet_macipynb)
+- [Utilisation](#utilisation)
+- [Sorties principales](#sorties-principales)
+- [Parametres importants](#parametres-importants)
+- [Remarques](#remarques)
+
 ## Structure du projet
 
 ```text
@@ -17,6 +27,7 @@ L'objectif du projet est d'etudier, par simulation a evenements discrets, le com
 |-- plot_debit_et_pertes_vs_K.png # Influence de K sur debit et pertes
 |-- plot_N_optimal.png            # Recherche du N optimal avec IC a 95 %
 |-- mac_live_simulation_fr.py     # Application desktop live avec curseurs
+|-- mac_live_demo.gif             # Demonstration animee de l'application desktop
 ```
 
 ## Apercu visuel du protocole
@@ -80,14 +91,14 @@ Le notebook est organise en plusieurs parties.
 
    La figure generee est `plot_debit_vs_N.png`.
 
-5.2 **Debit en fonction de `tau`**
+6. **Debit en fonction de `tau`**
 
    Cette partie etudie l'effet du parametre de backoff `tau` sur le debit (a `N`, `K` et `lambda` fixes).
    Chaque point correspond a plusieurs simulations independantes, avec un intervalle de confiance a 95 %.
 
    La figure generee est `plot_debit_vs_tau.png`.
 
-5.3 **Influence de `K` (capacité de file) sur le debit et les pertes**
+7. **Influence de `K` (capacite de file) sur le debit et les pertes**
 
    Cette section fait varier la taille de file `K` par station et observe :
    - le debit moyen ;
@@ -95,13 +106,13 @@ Le notebook est organise en plusieurs parties.
 
    La figure generee est `plot_debit_et_pertes_vs_K.png`.
 
-6. **Determination du `N` optimal**
+8. **Determination du `N` optimal**
 
    Cette section recherche le nombre de stations qui maximise le debit. Elle utilise davantage de repetitions Monte-Carlo afin d'obtenir des intervalles de confiance plus precis.
 
    La figure generee est `plot_N_optimal.png`.
 
-7. **Conclusion**
+9. **Conclusion**
 
    La derniere partie resume les resultats, les choix de modelisation et les hypotheses du simulateur.
 
@@ -145,6 +156,14 @@ python mac_live_simulation_fr.py
 ```
 
 Cette fenetre permet de modifier en direct `N`, `K`, `lambda`, `tau` et la vitesse de simulation avec des curseurs.
+
+### 5. Regenerer le GIF de demonstration desktop
+
+```bash
+python mac_live_simulation_fr.py --record-gif mac_live_demo.gif --record-seconds 12 --record-fps 8
+```
+
+Le GIF genere est celui affiche en haut de ce README.
 
 ## Sorties principales
 
